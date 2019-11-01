@@ -16,16 +16,16 @@ int binary_search(int* arr, int arrSize, int key) {
 			return mid;
 		}
 		else {
-			//ÀÛÀ¸¸é ¿ŞÂÊ
+			//ì‘ìœ¼ë©´ ì™¼ìª½
 			if (arr[mid] > key) {
 				end = mid - 1;
 			}
-			//Å©¸é ¿À¸¥ÂÊ
+			//í¬ë©´ ì˜¤ë¥¸ìª½
 			else {
 				first = mid + 1;
 			}
 
-			//Ã³À½°ú ³¡ÀÌ µÚ¹Ù²î¸é Á¾·á
+			//ì²˜ìŒê³¼ ëì´ ë’¤ë°”ë€Œë©´ ì¢…ë£Œ
 			if (first > end) {
 				return -1;
 			}
@@ -34,26 +34,26 @@ int binary_search(int* arr, int arrSize, int key) {
 }
 
 int main() {
-	printf("<ÀÌÁøÅ½»ö>\n");
+	printf("<ì´ì§„íƒìƒ‰>\n");
 
 	int n = 0;
 	int key = 0;
 	int* arr = NULL;
 
-	printf("¼ıÀÚÀÇ °³¼ö ÀÔ·Â : ");
+	printf("ìˆ«ìì˜ ê°œìˆ˜ ì…ë ¥ : ");
 	scanf("%d", &n);
 
 	arr = new int[n];
 
-	printf("¿À¸§Â÷¼ø Á¤·ÄÀÇ ¼ıÀÚ ÀÔ·Â (±¸ºĞÀÚ: °ø¹é) : ");
+	printf("ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ì˜ ìˆ«ì ì…ë ¥ (êµ¬ë¶„ì: ê³µë°±) : ");
 	for (int i = 0; i < n; i++) {
 		scanf("%d", &arr[i]);
 	}
 
-	printf("°Ë»ö ¼ıÀÚ ÀÔ·Â : ");
+	printf("ê²€ìƒ‰ ìˆ«ì ì…ë ¥ : ");
 	scanf("%d", &key);
 
-	printf("%d ¹øÂ° ¼ıÀÚ\n", binary_search(arr, n, key) + 1);
+	printf("%d ë²ˆì§¸ ìˆ«ì\n", binary_search(arr, n, key) + 1);
 
 	delete[] arr;
 

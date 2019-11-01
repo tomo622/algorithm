@@ -16,18 +16,18 @@ int main() {
 	int inputSize = 0;
 	int* inputArray = NULL;
 
-	printf("ÀÔ·ÂÇÒ ¼ıÀÚ °³¼ö : ");
+	printf("ì…ë ¥í•  ìˆ«ì ê°œìˆ˜ : ");
 	scanf("%d", &inputSize);
 	inputArray = new int[inputSize];
 
-	printf("ÀÔ·Â(±¸ºĞÀÚ: °ø¹é) : ");
+	printf("ì…ë ¥(êµ¬ë¶„ì: ê³µë°±) : ");
 	for (int i = 0; i < inputSize; i++) {
 		scanf("%d", &inputArray[i]);
 	}
 
 	for (int i = 0; i < inputSize - 1; i++) {
-		//°¢ ½Ãµµ ¸¶´Ù °¡Àå µÚ¿¡¼­ ºÎÅÍ Á¤·ÄµÊ
-		//°¢ ½Ãµµ ¸¶´Ù ÀÌÀü ½Ãµµ¿¡¼­ Á¤·ÄµÈ ¿ø¼Ò¸¦ Á¦¿ÜÇÏ°í ºñ±³
+		//ê° ì‹œë„ ë§ˆë‹¤ ê°€ì¥ ë’¤ì—ì„œ ë¶€í„° ì •ë ¬ë¨
+		//ê° ì‹œë„ ë§ˆë‹¤ ì´ì „ ì‹œë„ì—ì„œ ì •ë ¬ëœ ì›ì†Œë¥¼ ì œì™¸í•˜ê³  ë¹„êµ
 		for (int j = 0; j < inputSize - 1 - i; j++) {
 			if (inputArray[j] > inputArray[j + 1]) {
 				int temp = inputArray[j];

@@ -21,46 +21,46 @@ int main() {
 	int max = 0;
 	int index = 0;
 
-	printf("ÀÔ·ÂÇÒ ¼öÀÇ °³¼ö : ");
+	printf("ì…ë ¥í•  ìˆ˜ì˜ ê°œìˆ˜ : ");
 	scanf("%d", &inputSize);
 
 	inputArray = new int[inputSize];
 	resultArray = new int[inputSize];
 
-	printf("¼ıÀÚ ÀÔ·Â(±¸ºĞÀÚ : °ø¹é) : ");
+	printf("ìˆ«ì ì…ë ¥(êµ¬ë¶„ì : ê³µë°±) : ");
 	for (int i = 0; i < inputSize; i++) {
 		scanf("%d", &inputArray[i]);
 	}
 
-	//ÃÖ´ñ°ª Ã£±â
+	//ìµœëŒ“ê°’ ì°¾ê¸°
 	for (int i = 0; i < inputSize; i++) {
 		if (inputArray[i] > max) {
 			max = inputArray[i];
 		}
 	}
 
-	//È½¼öÇ¥ ¸¸µé±â
+	//íšŸìˆ˜í‘œ ë§Œë“¤ê¸°
 	cntArray = new int[max + 1];
 	memset(cntArray, 0, sizeof(int) * (max + 1));
 	for (int i = 0; i < inputSize; i++) {
 		(cntArray[inputArray[i]])++;
 	}
-	printf("È½¼öÇ¥\n");
+	printf("íšŸìˆ˜í‘œ\n");
 	print_array(cntArray, max + 1);
 
-	//´©ÀûÇ¥·Î º¯È¯
+	//ëˆ„ì í‘œë¡œ ë³€í™˜
 	for (int i = 0; i < max + 1 - 1; i++) {
 		cntArray[i + 1] += cntArray[i];
 	}
-	printf("´©ÀûÇ¥\n");
+	printf("ëˆ„ì í‘œ\n");
 	print_array(cntArray, max + 1);
 
-	//´ë»ó µ¥ÀÌÅÍ µÚ¿¡¼­ ºÎÅÍ ¼øÈ¸
+	//ëŒ€ìƒ ë°ì´í„° ë’¤ì—ì„œ ë¶€í„° ìˆœíšŒ
 	for (int i = inputSize - 1; i >= 0; i--) {
 		index = --cntArray[inputArray[i]];
 		resultArray[index] = inputArray[i];
 	}
-	printf("°á°ú\n");
+	printf("ê²°ê³¼\n");
 	print_array(resultArray, inputSize);
 
 	return 0;

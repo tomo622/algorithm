@@ -13,7 +13,7 @@ int arr[ROW_SIZE][COL_SIZE] = {
 };
 
 void row_major_order() {
-	printf("Çà ¿ì¼± Å½»ö\n");
+	printf("í–‰ ìš°ì„  íƒìƒ‰\n");
 	
 	for (int r = 0; r < ROW_SIZE; r++) {
 		for (int c = 0; c < COL_SIZE; c++) {
@@ -27,7 +27,7 @@ void row_major_order() {
 }
 
 void column_major_order() {
-	printf("¿­ ¿ì¼± Å½»ö\n");
+	printf("ì—´ ìš°ì„  íƒìƒ‰\n");
 
 	for (int c = 0; c < COL_SIZE; c++) {
 		for (int r = 0; r < ROW_SIZE; r++) {
@@ -41,7 +41,7 @@ void column_major_order() {
 }
 
 void zigzag_order() {
-	printf("Áö±×Àç±× Å½»ö\n");
+	printf("ì§€ê·¸ì¬ê·¸ íƒìƒ‰\n");
 
 	for (int r = 0; r < ROW_SIZE; r++) {
 		for (int c = 0; c < COL_SIZE; c++) {
@@ -56,18 +56,18 @@ void zigzag_order() {
 }
 
 void diagonal_order() {
-	printf("´ë°¢¼± Å½»ö\n");
+	printf("ëŒ€ê°ì„  íƒìƒ‰\n");
 
-	int spin = COL_SIZE + (ROW_SIZE - 1); //ÃÑ ¼øÈ¸ È½¼ö
+	int spin = COL_SIZE + (ROW_SIZE - 1); //ì´ ìˆœíšŒ íšŸìˆ˜
 	int c = 0;
 
 	for (int s = 0; s < spin; s++) {
-		//s´Â °¢ ¼øÈ¸ÀÇ Ä­ ÀÌµ¿ ¼ö ÀÌ¸é¼­ ½ÃÀÛ À§Ä¡ÀÇ column index
-		//row index´Â °¢ ¼øÈ¸ÀÇ Ä­ ÀÌµ¿ ¼ö ±îÁö Áõ°¡
-		//ÇÑ Ä­ ÀÌµ¿ÇÒ ¶§¸¶´Ù column index´Â °¨¼Ò
+		//sëŠ” ê° ìˆœíšŒì˜ ì¹¸ ì´ë™ ìˆ˜ ì´ë©´ì„œ ì‹œì‘ ìœ„ì¹˜ì˜ column index
+		//row indexëŠ” ê° ìˆœíšŒì˜ ì¹¸ ì´ë™ ìˆ˜ ê¹Œì§€ ì¦ê°€
+		//í•œ ì¹¸ ì´ë™í•  ë•Œë§ˆë‹¤ column indexëŠ” ê°ì†Œ
 		for (int r = 0, c = s; r <= s; r++, c--) {
 
-			//¹è¿­ÀÇ ¹üÀ§¿¡ ÀÖÀ» ¶§¸¸ ¼øÈ¸ÇÑ´Ù.
+			//ë°°ì—´ì˜ ë²”ìœ„ì— ìˆì„ ë•Œë§Œ ìˆœíšŒí•œë‹¤.
 			if (r >= 0 && r < ROW_SIZE && c >= 0 && c < COL_SIZE) {
 				printf("%d ", arr[r][c]);
 			}
@@ -80,10 +80,10 @@ void diagonal_order() {
 }
 
 void delta_order() {
-	printf("µ¨Å¸¸¦ ÀÌ¿ëÇÑ Å½»ö\n");
+	printf("ë¸íƒ€ë¥¼ ì´ìš©í•œ íƒìƒ‰\n");
 
-	int dx[4] = { 0, 0, -1, 1 }; //ÁÂ¿ì
-	int dy[4] = { -1, 1, 0, 0 }; //»óÇÏ
+	int dx[4] = { 0, 0, -1, 1 }; //ì¢Œìš°
+	int dy[4] = { -1, 1, 0, 0 }; //ìƒí•˜
 	int tempR, tempC;
 
 	for (int r = 0; r < ROW_SIZE; r++) {
@@ -106,7 +106,7 @@ void delta_order() {
 }
 
 int main() {
-	printf("<2Â÷¿ø ¹è¿­ Å½»ö>\n");
+	printf("<2ì°¨ì› ë°°ì—´ íƒìƒ‰>\n");
 
 	row_major_order();
 	column_major_order();

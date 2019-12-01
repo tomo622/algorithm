@@ -43,7 +43,7 @@
   ![selection_sort_0](https://user-images.githubusercontent.com/19742979/69917497-0ccd5300-14aa-11ea-9601-bb908d44b19d.PNG)
   
   1. 가장 처음 정렬될 위치를 최소값의 위치로 정한다.
-  ![selection_sort_1](https://user-images.githubusercontent.com/19742979/69917275-929bcf00-14a7-11ea-82b5-fe2993916a1c.PNG)
+      ![selection_sort_1](https://user-images.githubusercontent.com/19742979/69917275-929bcf00-14a7-11ea-82b5-fe2993916a1c.PNG)
   2. 정렬될 위치 다음 인덱스 부터 끝까지 탐색하며 현재 최소값 보다 작은 경우 최소값의 위치를 변경한다.
       ![selection_sort_2](https://user-images.githubusercontent.com/19742979/69917276-929bcf00-14a7-11ea-941a-763557686b4f.PNG)
   3. 배열 끝까지 진행한다.

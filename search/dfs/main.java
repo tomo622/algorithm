@@ -60,9 +60,28 @@ public class main {
 //			System.out.println();
 //		}
 		
+		System.out.println("<<<<<<<<< dfs - stack >>>>>>>>>");
 		dfs(ad, 0);
+		
+		System.out.println("\n<<<<<<<<< dfs - recursion >>>>>>>>>");
+		int visit[] = new int[ad.length];
+		dfsRecursion(ad, visit, 0);
+		System.out.println();
+		for(int i = 0; i < visit.length; i++) {
+			System.out.print(visit[i] + " ");
+		}
 	}
 	
+	private static void dfsRecursion(int ad[][], int visit[], int start) {
+		visit[start] = 1;
+		System.out.print(start + " ");
+		
+		for(int i = 0; i < ad.length; i++) {
+			if(ad[start][i] == 1 && visit[i] != 1) {
+				dfsRecursion(ad, visit, i);
+			}
+		}
+	}
 	
 	private static void dfs(int ad[][], int first) {
 		MyStack myStack = new MyStack(new int[ad.length], 0);
